@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="{{ asset('logo-onion.png') }}" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @yield('vite_resource')
 </head>
 
 <body class="antialiased text-gray-900">
@@ -15,21 +16,15 @@
     <main class="min-h-screen w-full flex items-center justify-center md:mt-0">
         <section
             class="relative overflow-hidden h-screen unmobile:h-[650px] md:rounded-2xl w-screen md:w-[320px] md:border-[5px] border-rose-400 bg-slate-50 shadow-xl shadow-rose-500/40">
+            @include('layouts.navigation')
+            <div class="h-[calc(100%-130px)] p-4 overflow-y-scroll">
+                <h1 class="text-center font-bold text-2xl border-b-2 border-b-slate-700 pb-2 mb-6 uppercase">
+                    @yield('page_title')
+                </h1>
+                @yield('content')
+            </div>
 
-            <nav class="bg-rose-500/30 shadow-sm shadow-rose-300/80 border-b-rose-400 border-b-2">
-                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                    <a href="{{ env('APP_URL') }}" class="flex items-center">
-                        <img src="{{ asset('logo-onion.png') }}" class="h-8 mr-3" alt="Logo" />
-                        <span
-                            class="self-center text-2xl font-semibold tracking-wide whitespace-nowrap dark:text-white">{{ env('APP_NAME') }}</span>
-                    </a>
-                </div>
-            </nav>
-
-            <footer class="absolute w-full h-14 bg-rose-500/30 bottom-0 left-0">
-
-            </footer>
-
+            @include('layouts.footer')
         </section>
     </main>
 
