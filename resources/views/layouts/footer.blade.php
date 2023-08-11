@@ -12,7 +12,7 @@
             </x-slot>
         </x-menu-link>
 
-        <x-menu-link label="Uji Data" segment='check'>
+        <x-menu-link label="Uji Data" routeName="check" segment='check'>
             <x-slot name="icon">
                 <x-icon-test-tube-fill class="group-hover:text-rose-500 w-6 h-6" />
             </x-slot>
