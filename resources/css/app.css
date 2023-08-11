@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active-menu {
+    @apply bg-rose-50 text-rose-500;
+}
