@@ -3,13 +3,24 @@ import axios from "axios";
 import Swal from "sweetalert2/dist/sweetalert2.js";
 import "sweetalert2/src/sweetalert2.scss";
 
-["ketuaan", "kadar_air", "diameter"].forEach((element) =>
+["diameter", "kadar_air"].forEach((element) =>
     IMask(document.getElementById(element), {
         mask: Number,
-        min: 1,
-        thousandsSeparator: ".",
+        scale: 4,
+        padFractionalZeros: false,
+        normalizeZeros: true,
+        radix: ",",
+        mapToRadix: ["."],
+        min: 0,
+        max: 1000,
     })
 );
+
+IMask(document.getElementById("ketuaan"), {
+    mask: Number,
+    min: 1,
+    thousandsSeparator: ".",
+});
 
 const checkForm = document.getElementById("formCheck");
 
