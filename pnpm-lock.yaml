@@ -14,9 +14,6 @@ dependencies:
   sweetalert2:
     specifier: ^11.7.22
     version: 11.7.22
-  zoom-vanilla.js:
-    specifier: ^2.0.6
-    version: 2.0.6
 
 devDependencies:
   autoprefixer:
@@ -1073,7 +1070,3 @@ packages:
     resolution: {integrity: sha512-2eHWfjaoXgTBC2jNM1LRef62VQa0umtvRiDSk6HSzW7RvS5YtkabJrwYLLEKWBc8a5U2PTSCs+dJjUTJdlHsWQ==}
     engines: {node: '>= 14'}
     dev: true
-
-  /zoom-vanilla.js@2.0.6:
-    resolution: {integrity: sha512-VKtOyMaNedVTi8uLpUO5JPFE/MgaELQ7BPjzX3APbvEJufr4JRj+c7f+APVcRMr2Rt9wcm7JeLmD/fjU2q5etw==}
-    dev: false
