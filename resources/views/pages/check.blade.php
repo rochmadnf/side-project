@@ -54,14 +54,14 @@
             <label class="text-sm block mb-2" for="kadar_air">Jumlah kadar air pada Bawang Merah?</label>
             <input
                 class="block w-full p-2 text-gray-900 border border-rose-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-rose-500 focus:border-rose-500"
-                type="text" inputmode="tel" name="kadar_air" id="kadar_air">
+                type="text" name="kadar_air" id="kadar_air">
         </div>
 
         <div class="mb-4">
             <label class="text-sm block mb-2" for="diameter">Ukuran diameter Bawang Merah?</label>
             <input
                 class="block w-full p-2 text-gray-900 border border-rose-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-rose-500 focus:border-rose-500"
-                type="text" inputmode="tel" name="diameter" id="diameter">
+                type="text" name="diameter" id="diameter">
         </div>
 
         <button type="submit"

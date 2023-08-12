@@ -35,7 +35,7 @@ checkForm.addEventListener("submit", async (e) => {
     if (Number(response.status) === 200) {
         Swal.fire({
             title: response.data.message,
-            icon: "success",
+            icon: "info",
             width: "18em",
             position: "center",
             toast: true,
