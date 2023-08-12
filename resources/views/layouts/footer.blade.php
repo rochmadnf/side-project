@@ -1,4 +1,4 @@
-<footer class="absolute w-full h-fit bg-rose-500/30 bottom-0 left-0">
+<footer id="bottom_navigation" class="absolute w-full h-fit bg-rose-500/30 bottom-0 left-0">
     <ul class="flex justify-between items-center">
         <x-menu-link label="Beranda" routeName="home" segment=''>
             <x-slot name="icon">

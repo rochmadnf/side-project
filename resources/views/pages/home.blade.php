@@ -1,5 +1,7 @@
 @extends('app')
 
+@section('page_title', 'Beranda')
+
 @section('content')
-    <h1>Home</h1>
+
 @endsection
