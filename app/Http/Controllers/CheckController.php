@@ -35,10 +35,15 @@ class CheckController extends Controller
             $dataMustOne["diameter"] = 0;
         }
 
-        $checkingOne = array_filter($dataMustOne, fn ($prop) => $prop >= 1);
-        $checkingZero = array_filter($dataMustZero, fn ($prop) => $prop >= 0);
+        $mutu1 = ((0.9484 - $dataMustOne['ketuaan']) ** 2) + ((0.9992 - $dataMustOne['kekerasan']) ** 2)
+            + ((0.0069 - $dataMustZero["kebusukan"]) ** 2) + ((0.5276 - $dataMustZero["kerusakan"]) ** 2)
+            + ((0.8617 - $dataMustOne["kadar_air"]) ** 2) + ((0.5300 - $dataMustOne["diameter"]) ** 2);
 
-        if (count($checkingOne) === 4 && count($checkingZero) === 2) {
+        $mutu2 = ((0.9688 - $dataMustOne['ketuaan']) ** 2) + ((0.0000 - $dataMustOne['kekerasan']) ** 2)
+            + ((0.0000 - $dataMustZero["kebusukan"]) ** 2) + ((0.0000 - $dataMustZero["kerusakan"]) ** 2)
+            + ((0.0625  - $dataMustOne["kadar_air"]) ** 2) + ((0.4844 - $dataMustOne["diameter"]) ** 2);
+
+        if ($mutu1 < $mutu2) {
             $res = [
                 "message" => "Bawang Merah Bermutu 1"
             ];
@@ -47,6 +52,9 @@ class CheckController extends Controller
                 "message" => "Bawang Merah Bermutu 2"
             ];
         }
+        $res["mutu1"] = $mutu1;
+        $res["mutu2"] = $mutu2;
+
 
         return response()->json($res, 200);
     }
