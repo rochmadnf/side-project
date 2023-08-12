@@ -3,12 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class CheckController extends Controller
 {
     public function calculate(Request $request)
     {
 
+        $request->request->set('diameter', floatval(Str::remove(",", Str::replaceFirst(',', '.', $request->diameter))));
+        $request->request->set('kadar_air', floatval(Str::remove(",", Str::replaceFirst(',', '.', $request->kadar_air))));
+
+        // return response()->json($request->all(), 400);
         $dataMustOne = [
             "ketuaan" => ((int) $request->ketuaan < 60) ? 0 : 1,
             "kekerasan" => (int) $request->kekerasan,
@@ -20,7 +25,7 @@ class CheckController extends Controller
         ];
 
         // kadar air
-        if ((float) $request->kadar_air > 80 && (float) $request->kadar_air <= 85) {
+        if ((float) $request->kadar_air >= 80 && (float) $request->kadar_air <= 85) {
             $dataMustOne["kadar_air"] = 1;
         } else {
             $dataMustOne["kadar_air"] = 0;
@@ -52,9 +57,7 @@ class CheckController extends Controller
                 "message" => "Bawang Merah Bermutu 2"
             ];
         }
-        $res["mutu1"] = $mutu1;
-        $res["mutu2"] = $mutu2;
-
+        $res["transformation"] = array_merge($dataMustOne, $dataMustZero);
 
         return response()->json($res, 200);
     }
