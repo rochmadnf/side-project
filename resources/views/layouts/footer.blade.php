@@ -6,7 +6,7 @@
             </x-slot>
         </x-menu-link>
 
-        <x-menu-link label="Peta Kluster" segment='cluster'>
+        <x-menu-link label="Peta Kluster" routeName="cluster" segment='cluster-map'>
             <x-slot name="icon">
                 <x-icon-map-trifold-fill class="group-hover:text-rose-500 w-6 h-6" />
             </x-slot>
