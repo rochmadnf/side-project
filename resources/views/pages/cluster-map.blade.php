@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="mb-4">
-        <img class="rounded-md" src="{{ asset('images/cluster-map.jpg') }}" alt="Cluster Map" />
+        <img data-action="zoom" class="rounded-md" src="{{ asset('images/cluster-map.jpg') }}" alt="Cluster Map" />
     </div>
 
     <div class="flex flex-col gap-2">
