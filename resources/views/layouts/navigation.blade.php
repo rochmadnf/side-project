@@ -5,5 +5,10 @@
             <span
                 class="self-center text-2xl font-semibold tracking-wide whitespace-nowrap dark:text-white">{{ env('APP_NAME') }}</span>
         </a>
+
+        <div id="fullscreen-btn" data-open="false">
+            @svg('icon-corners-out-bold', 'fullscreen-on w-6 h-6 cursor-pointer text-gray-950 hover:text-white')
+            @svg('icon-corners-in-bold', 'fullscreen-off hidden w-6 h-6 cursor-pointer text-gray-950 hover:text-white')
+        </div>
     </div>
 </nav>
