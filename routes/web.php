@@ -7,6 +7,8 @@ Route::get('/', function () {
     return view('pages.home')->withPageTitle(false);
 })->name('home');
 
+Route::get('/app-info', fn () => view('pages.app-info')->withPageTitle('Info Aplikasi'))->name('appInfo');
+
 Route::get('/check', function () {
     return view('pages.check')->withPageTitle('Uji Data');
 })->name('check');

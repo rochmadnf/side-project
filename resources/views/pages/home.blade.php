@@ -8,7 +8,7 @@
         <p class="text-center unmobile:text-sm text-lg font-light mt-1">Selamat Datang di Aplikasi Bamer Palu</p>
 
         <div class="mt-8 flex flex-col gap-4">
-            <a href="#" type="button"
+            <a href="{{ route('appInfo') }}" type="button"
                 class="
                     bg-gradient-to-r from-sky-500 via-sky-600 to-sky-700
                     shadow-md shadow-sky-500/50

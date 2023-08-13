@@ -3,10 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="author" content="Rochmad Nurul Fahmi" />
-    <title>{{ env('APP_NAME') }}</title>
-    <link rel="shortcut icon" href="{{ asset('logo-onion.png') }}" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rochmad Nurul Fahmi" />
+    <meta name="description" content="{{ env('APP_NAME') }} &mdash; merupakan aplikasi yang dibuat dengan tujuan mempermudah petani atau masyarakat umum untuk mengecek Standar Mutu dari Bawang Merah yang hasilkan saat panen." />
+    
+    <title>{{ env('APP_NAME') }}</title>
+    
+    <link rel="shortcut icon" href="{{ asset('logo-onion.png') }}" type="image/png">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @yield('vite_resource')
 </head>
