@@ -1,6 +1,14 @@
 import "./bootstrap";
 import "flowbite";
 
+// New event listener:
+window.addEventListener("load", function () {
+    setTimeout(function () {
+        // Hide the address bar:
+        window.scrollTo(0, 1);
+    }, 150);
+});
+
 document.getElementById("fullscreen-btn").addEventListener("click", (e) => {
     const isOpen = !(e.currentTarget.getAttribute("data-open") === "true");
     e.currentTarget.setAttribute("data-open", isOpen);
