@@ -1,5 +1,5 @@
-<footer id="bottom_navigation" class="absolute w-full h-fit bg-rose-500/30 bottom-0 left-0">
-    <ul class="flex justify-between items-center">
+<footer id="bottom_navigation" class="absolute w-full h-max bg-rose-500/30 bottom-0 left-0">
+    <ul class="flex justify-evenly items-center p-2 gap-1">
         <x-menu-link label="Beranda" routeName="home" segment=''>
             <x-slot name="icon">
                 <x-icon-house-fill class="group-hover:text-rose-500 w-6 h-6" />

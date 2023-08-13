@@ -28,6 +28,6 @@ class ResearcherController extends Controller
 
         ];
 
-        return view('pages.researcher', compact('researcher'));
+        return view('pages.researcher', compact('researcher'))->withPageTitle('Tim Peneliti');
     }
 }

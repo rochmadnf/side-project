@@ -16,7 +16,11 @@ module.exports = {
             ...defaultTheme.screens,
             unmobile: { raw: "(min-height: 700px)" },
         },
-        extend: {},
+        extend: {
+            boxShadow: {
+                0: "0 0 10px 0 rgba(0,0,0,0.5)",
+            },
+        },
     },
     plugins: [require("flowbite/plugin")],
 };

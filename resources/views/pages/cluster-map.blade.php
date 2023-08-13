@@ -9,7 +9,7 @@
 
 @section('content')
     <div class="mb-4">
-        <img data-action="zoom" class="rounded-md shadow-md shadow-gray-400" src="{{ asset('images/cluster-map.jpg') }}"
+        <img data-action="zoom" class="rounded-md shadow-0 shadow-slate-300" src="{{ asset('images/cluster-map.jpg') }}"
             alt="Cluster Map" />
     </div>
 

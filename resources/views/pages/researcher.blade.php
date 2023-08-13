@@ -4,7 +4,7 @@
 
 @section('content')
     @foreach ($researcher as $research)
-        <div class="flex flex-col justify-center items-center p-4 mb-4 rounded-md shadow-md bg-slate-50/30 shadow-gray-400">
+        <div class="flex flex-col justify-center items-center p-4 mb-4 rounded-md shadow-0 bg-slate-50/30 shadow-slate-300">
             <div class="mb-4">
                 <img class="rounded-full h-24 w-24 border-2 border-rose-500 p-0.5"
                     src="{{ asset('images/' . $research['avatar']) }}" alt="Avatar {{ $research['name'] }}">
