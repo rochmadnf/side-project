@@ -6,7 +6,7 @@
         <h1 class="font-bold text-xl">Halo, Farmers</h1>
         <p class="text-center text-sm font-light mt-1">Selamat Datang di Aplikasi Bamer Palu</p>
 
-        <div class="mt-8 flex flex-col gap-4">
+        <div class="mt-16 flex flex-col gap-4">
             <a href="#" type="button"
                 class="
                     bg-gradient-to-r from-sky-500 via-sky-600 to-sky-700
