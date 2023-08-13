@@ -2,18 +2,21 @@
 
 @section('content')
     <div class="flex flex-col justify-center items-center p-2">
-        <img class="block mt-2 h-36 w-36" src="{{ asset('images/hello_farmer.png') }}" alt="Hello Farmer">
-        <h1 class="font-bold text-xl">Halo, Farmers</h1>
-        <p class="text-center text-sm font-light mt-1">Selamat Datang di Aplikasi Bamer Palu</p>
+        <img class="block mt-2 unmobile:h-36 h-44 unmobile:w-36 w-44" src="{{ asset('images/hello_farmer.png') }}"
+            alt="Hello Farmer">
+        <h1 class="font-bold text-2xl unmobile:text-xl">Halo, Farmers</h1>
+        <p class="text-center unmobile:text-sm text-base font-light mt-1">Selamat Datang di Aplikasi Bamer Palu</p>
 
-        <div class="mt-16 flex flex-col gap-4">
+        <div class="mt-16 unmobile:mt-8 flex flex-col unmobile:gap-4 gap-6">
             <a href="#" type="button"
                 class="
                     bg-gradient-to-r from-sky-500 via-sky-600 to-sky-700
                     shadow-md shadow-sky-500/50
                     hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-sky-300
-                    text-white rounded-xl font-medium text-sm px-5 py-2.5 text-center inline-flex items-center">
-                <x-icon-info-fill class="w-5 h-5 mr-2" />
+                    text-white rounded-xl font-medium
+                    text-center inline-flex items-center
+                    text-base px-6 py-3 unmobile:text-sm unmobile:px-5 unmobile:py-2.5">
+                <x-icon-info-fill class="w-7 h-7 unmobile:w-5 unmobile:h-5 mr-2" />
                 Info Aplikasi
             </a>
 
@@ -22,8 +25,9 @@
                     bg-gradient-to-r from-emerald-500 via-emerald-600 to-emerald-700
                     shadow-md shadow-emerald-500/50
                     hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-emerald-300
-                    text-white rounded-xl font-medium text-sm px-5 py-2.5 text-center inline-flex items-center">
-                <x-icon-flask-fill class="w-5 h-5 mr-2" />
+                    text-white rounded-xl font-medium text-center inline-flex items-center
+                    text-base px-6 py-3 unmobile:text-sm unmobile:px-5 unmobile:py-2.5">
+                <x-icon-flask-fill class="w-7 h-7 unmobile:w-5 unmobile:h-5 mr-2" />
                 Standar Mutu
             </a>
 
@@ -32,8 +36,9 @@
                     bg-gradient-to-r from-rose-500 via-rose-600 to-rose-700
                     shadow-md shadow-rose-500/50
                     hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-rose-300
-                    text-white rounded-xl font-medium text-sm px-5 py-2.5 text-center inline-flex items-center">
-                <x-icon-sparkle-fill class="w-5 h-5 mr-2" />
+                    text-white rounded-xl font-medium text-center inline-flex items-center
+                    text-base px-6 py-3 unmobile:text-sm unmobile:px-5 unmobile:py-2.5">
+                <x-icon-sparkle-fill class="w-7 h-7 unmobile:w-5 unmobile:h-5 mr-2" />
                 Cek Mutu
             </a>
 
@@ -42,8 +47,9 @@
                     bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700
                     shadow-md shadow-orange-500/50
                     hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-orange-300
-                    text-white rounded-xl font-medium text-sm px-5 py-2.5 text-center inline-flex items-center">
-                <x-icon-map-trifold-fill class="w-5 h-5 mr-2" />
+                    text-white rounded-xl font-medium text-center inline-flex items-center
+                    text-base px-6 py-3 unmobile:text-sm unmobile:px-5 unmobile:py-2.5">
+                <x-icon-map-trifold-fill class="w-7 h-7 unmobile:w-5 unmobile:h-5 mr-2" />
                 Peta Kluster
             </a>
         </div>
