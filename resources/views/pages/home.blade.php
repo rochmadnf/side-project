@@ -2,12 +2,12 @@
 
 @section('content')
     <div class="flex flex-col justify-center items-center p-2">
-        <img class="block mt-2 unmobile:h-36 h-44 unmobile:w-36 w-44" src="{{ asset('images/hello_farmer.png') }}"
+        <img class="block mt-2 unmobile:h-36 h-48 unmobile:w-36 w-48" src="{{ asset('images/hello_farmer.png') }}"
             alt="Hello Farmer">
-        <h1 class="font-bold text-2xl unmobile:text-xl">Halo, Farmers</h1>
-        <p class="text-center unmobile:text-sm text-base font-light mt-1">Selamat Datang di Aplikasi Bamer Palu</p>
+        <h1 class="font-bold text-3xl unmobile:text-xl">Halo, Farmers</h1>
+        <p class="text-center unmobile:text-sm text-lg font-light mt-1">Selamat Datang di Aplikasi Bamer Palu</p>
 
-        <div class="mt-10 unmobile:mt-8 flex flex-col unmobile:gap-4 gap-6">
+        <div class="mt-8 flex flex-col gap-4">
             <a href="#" type="button"
                 class="
                     bg-gradient-to-r from-sky-500 via-sky-600 to-sky-700
