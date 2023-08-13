@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ResearcherController;
+use App\Http\Controllers\StandardMutuController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -8,6 +9,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/app-info', fn () => view('pages.app-info')->withPageTitle('Info Aplikasi'))->name('appInfo');
+Route::get('/standard-mutu', [StandardMutuController::class, 'index'])->name('standardMutu');
 
 Route::get('/check', function () {
     return view('pages.check')->withPageTitle('Uji Data');

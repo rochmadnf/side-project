@@ -20,7 +20,7 @@
                 Info Aplikasi
             </a>
 
-            <a href="#" type="button"
+            <a href="{{ route('standardMutu') }}" type="button"
                 class="
                     bg-gradient-to-r from-emerald-500 via-emerald-600 to-emerald-700
                     shadow-md shadow-emerald-500/50

@@ -3,7 +3,7 @@
         <a href="{{ env('APP_URL') }}" class="flex items-center">
             <img src="{{ asset('logo-onion.png') }}" class="h-8 mr-3" alt="Logo" />
             <span
-                class="self-center text-2xl font-semibold tracking-wide whitespace-nowrap dark:text-white">{{ env('APP_NAME') }}</span>
+                class="self-center text-2xl font-alatsi text-gray-800 font-semibold tracking-wide whitespace-nowrap">{{ env('APP_NAME') }}</span>
         </a>
 
         <div id="fullscreen-btn" data-open="false">

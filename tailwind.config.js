@@ -20,7 +20,11 @@ module.exports = {
             boxShadow: {
                 0: "0 0 10px 0 rgba(0,0,0,0.5)",
             },
+            fontFamily: {
+                sans: ["Poppins", ...defaultTheme.fontFamily.sans],
+                alatsi: ["Alatsi", ...defaultTheme.fontFamily.serif],
+            },
         },
     },
-    plugins: [require("flowbite/plugin")],
+    plugins: [require("flowbite/plugin"), require("@tailwindcss/typography")],
 };
