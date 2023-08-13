@@ -15,7 +15,7 @@
 
     <main class="min-h-screen w-full flex items-center justify-center md:mt-0">
         <section
-            class="relative overflow-hidden h-screen unmobile:h-[650px] md:rounded-2xl w-screen md:w-[320px] md:border-[5px] border-rose-400 bg-slate-50 shadow-xl shadow-rose-500/40">
+            class="relative flex flex-col justify-center overflow-hidden h-screen unmobile:h-[650px] md:rounded-2xl w-screen md:w-[320px] md:border-[5px] border-rose-400 bg-slate-50 shadow-xl shadow-rose-500/40">
             @include('layouts.navigation')
 
             @if ($pageTitle)
@@ -27,7 +27,7 @@
                 </div>
                 @include('layouts.footer')
             @else
-                <div class="h-full p-4 overflow-y-auto">
+                <div class="p-4 overflow-y-auto flex flex-col justify-center">
                     @yield('content')
                 </div>
                 @yield('self_footer')
