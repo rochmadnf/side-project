@@ -13,16 +13,16 @@
     <form id="formCheck" class="mt-6 shadow-0 shadow-slate-300 py-4 px-4 rounded-md bg-white">
         <div class="mb-4">
             <label class="text-sm block mb-2" for="ketuaan">Berapa hari setelah tanam (HST) Bawang Merah Anda?</label>
-            <input placeholder="1"
+            <input placeholder="1" required
                 class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg sm:text-xs focus:ring-rose-500 focus:border-rose-500"
                 type="text" inputmode="tel" name="ketuaan" id="ketuaan">
         </div>
 
         <div class="mb-4">
             <label class="text-sm block mb-2" for="kekerasan">Bagaimana tekstur kekerasan Bawang Merah?</label>
-            <select id="kekerasan" name="kekerasan"
+            <select id="kekerasan" name="kekerasan" required
                 class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2">
-                <option selected disabled>--Pilih Kekerasan--</option>
+                <option disabled>--Pilih Kekerasan--</option>
                 <option value="0">Keras</option>
                 <option value="1">Cukup Keras</option>
             </select>
@@ -30,9 +30,9 @@
 
         <div class="mb-4">
             <label class="text-sm block mb-2" for="kebusukan">Kondisi Bawang Merah busuk?</label>
-            <select id="kebusukan" name="kebusukan"
+            <select id="kebusukan" name="kebusukan" required
                 class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2">
-                <option selected disabled>--Pilih Kebusukan--</option>
+                <option disabled>--Pilih Kebusukan--</option>
                 <option value="1">Ya</option>
                 <option value="0">Tidak</option>
             </select>
@@ -40,9 +40,9 @@
 
         <div class="mb-4">
             <label class="text-sm block mb-2" for="kerusakan">Kondisi Bawang Merah rusak?</label>
-            <select id="kerusakan" name="kerusakan"
+            <select id="kerusakan" name="kerusakan" required
                 class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2">
-                <option selected disabled>--Pilih Kerusakan--</option>
+                <option disabled>--Pilih Kerusakan--</option>
                 <option value="1">Ya</option>
                 <option value="0">Tidak</option>
             </select>
@@ -50,14 +50,14 @@
 
         <div class="mb-4">
             <label class="text-sm block mb-2" for="kadar_air">Jumlah kadar air pada Bawang Merah?</label>
-            <input
+            <input required
                 class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg sm:text-xs focus:ring-rose-500 focus:border-rose-500"
                 type="text" name="kadar_air" id="kadar_air" placeholder="0">
         </div>
 
         <div class="mb-4">
             <label class="text-sm block mb-2" for="diameter">Ukuran diameter Bawang Merah?</label>
-            <input
+            <input required
                 class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg sm:text-xs focus:ring-rose-500 focus:border-rose-500"
                 type="text" name="diameter" id="diameter" placeholder="0">
         </div>
