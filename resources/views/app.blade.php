@@ -17,18 +17,19 @@
         <section
             class="relative overflow-hidden h-screen unmobile:h-[650px] md:rounded-2xl w-screen md:w-[320px] md:border-[5px] border-rose-400 bg-slate-50 shadow-xl shadow-rose-500/40">
             @include('layouts.navigation')
-            <div class="h-[calc(100%-142px)] p-4 overflow-y-auto">
-                @if ($pageTitle)
+
+            @if ($pageTitle)
+                <div class="h-[calc(100%-142px)] p-4 overflow-y-auto">
                     <h1 class="text-center font-bold text-xl border-b-2 border-b-slate-700 pb-1 mb-6 uppercase">
                         {{ $pageTitle }}
                     </h1>
-                @endif
-                @yield('content')
-            </div>
-
-            @if ($pageTitle)
+                    @yield('content')
+                </div>
                 @include('layouts.footer')
             @else
+                <div class="h-full p-4 overflow-y-auto">
+                    @yield('content')
+                </div>
                 @yield('self_footer')
             @endif
         </section>
