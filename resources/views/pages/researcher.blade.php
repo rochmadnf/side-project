@@ -1,7 +1,5 @@
 @extends('app')
 
-@section('page_title', 'Tim Peneliti')
-
 @section('content')
     @foreach ($researcher as $research)
         <div class="flex flex-col justify-center items-center p-4 mb-4 rounded-md shadow-0 bg-slate-50/30 shadow-slate-300">

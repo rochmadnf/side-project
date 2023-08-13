@@ -1,7 +1,5 @@
 @extends('app')
 
-@section('page_title', 'Peta Kluster')
-
 @section('vite_resource')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zoom-vanilla.js/dist/zoom.css">
     <script src="https://cdn.jsdelivr.net/npm/zoom-vanilla.js/dist/zoom-vanilla.min.js" defer></script>
