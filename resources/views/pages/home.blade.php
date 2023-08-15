@@ -4,8 +4,8 @@
     <div class="flex flex-col justify-center items-center p-2">
         <img class="block mt-2 unmobile:h-36 h-48 unmobile:w-36 w-48" src="{{ asset('images/hello_farmer.png') }}"
             alt="Hello Farmer">
-        <h1 class="font-bold text-3xl unmobile:text-xl">Halo, Farmers</h1>
-        <p class="text-center unmobile:text-sm text-lg font-light mt-1">Selamat Datang di Aplikasi Bamer Palu</p>
+        <h1 class="font-bold text-2xl unmobile:text-xl">Halo, Farmers</h1>
+        <p class="text-center unmobile:text-sm text-md font-light mt-1">Selamat Datang di Aplikasi Bamer Palu</p>
 
         <div class="mt-8 flex flex-col gap-4">
             <a href="{{ route('appInfo') }}" type="button"
@@ -58,8 +58,9 @@
 
 @section('self_footer')
     <footer id="bottom_navigation" class="absolute w-full h-fit bg-rose-500/30 bottom-0 left-0">
-        <p class="text-xs font-medium text-center py-3 px-1.5 leading-5 text-gray-500">&copy; 2023 Jurusan Matematika Prodi
-            Matematika
+        <p class="text-xs font-medium text-center py-3 px-1.5 leading-5 text-gray-500">&copy; 2023
+            Prodi Matematika
+            Jurusan Matematika
             Fakultas
             MIPA
             Universitas
