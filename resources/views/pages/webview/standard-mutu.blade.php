@@ -142,6 +142,4 @@
         </ol>
 
     </article>
-
-    <x-btn-back-home />
 @endsection
