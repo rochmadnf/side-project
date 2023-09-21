@@ -1,10 +1,21 @@
+import 'package:bamer_palu/components/brand.dart';
 import 'package:bamer_palu/components/button.dart';
+import 'package:bamer_palu/pages/main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
+
+  Future<void> _launchUrl(String _url,
+      {bool forceWebView = false, bool enableJavascript = false}) async {
+    if (!await launch(_url,
+        forceWebView: forceWebView, enableJavaScript: enableJavascript)) {
+      throw Exception('Could not launch $_url');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,21 +31,7 @@ class IntroPage extends StatelessWidget {
             Align(
               alignment: Alignment.center,
               child: Container(
-                child: Row(children: [
-                  Image.asset(
-                    'lib/images/logo-untad.png',
-                    width: 32,
-                    height: 32,
-                  ),
-                  const SizedBox(width: 12),
-                  Text(
-                    "Bamer Palu",
-                    style: GoogleFonts.alatsi(
-                        fontSize: 28,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w600),
-                  ),
-                ]),
+                child: Brand(),
               ),
             ),
 
@@ -69,7 +66,16 @@ class IntroPage extends StatelessWidget {
                 children: [
                   Button(
                     text: 'Info Aplikasi',
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => MainPage(
+                            selectedIdTab: 0,
+                            selectedIdPage: 4,
+                          ),
+                        ),
+                      );
+                    },
                     buttonColor: Color.fromARGB(255, 90, 163, 245),
                     buttonIcon: PhosphorIcon(
                       PhosphorIcons.fill.info,
@@ -81,7 +87,12 @@ class IntroPage extends StatelessWidget {
                   ),
                   Button(
                     text: 'Standar Mutu',
-                    onTap: () {},
+                    onTap: () async {
+                      await _launchUrl(
+                          'https://bamer.dapurku-ganteng.site/webview/standard-mutu',
+                          forceWebView: true,
+                          enableJavascript: true);
+                    },
                     buttonColor: Color.fromARGB(255, 88, 177, 91),
                     buttonIcon: PhosphorIcon(
                       PhosphorIcons.fill.flask,
@@ -93,7 +104,16 @@ class IntroPage extends StatelessWidget {
                   ),
                   Button(
                     text: 'Cek Mutu',
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => MainPage(
+                            selectedIdTab: 2,
+                            selectedIdPage: 2,
+                          ),
+                        ),
+                      );
+                    },
                     buttonColor: Color.fromARGB(255, 211, 49, 49),
                     buttonIcon: PhosphorIcon(
                       PhosphorIcons.fill.sparkle,
@@ -105,7 +125,16 @@ class IntroPage extends StatelessWidget {
                   ),
                   Button(
                     text: 'Peta Kluster',
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => MainPage(
+                            selectedIdTab: 1,
+                            selectedIdPage: 1,
+                          ),
+                        ),
+                      );
+                    },
                     buttonColor: Color.fromARGB(255, 234, 106, 37),
                     buttonIcon: PhosphorIcon(
                       PhosphorIcons.fill.mapTrifold,
