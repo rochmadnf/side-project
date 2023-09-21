@@ -11,6 +11,10 @@ Route::get('/', function () {
 Route::get('/app-info', fn () => view('pages.app-info')->withPageTitle('Info Aplikasi'))->name('appInfo');
 Route::get('/standard-mutu', [StandardMutuController::class, 'index'])->name('standardMutu');
 
+Route::prefix('webview')->group(function () {
+    Route::get('standard-mutu', [StandardMutuController::class, 'webview'])->name('standardMutuWebview');
+});
+
 Route::get('/check', function () {
     return view('pages.check')->withPageTitle('Uji Data');
 })->name('check');
