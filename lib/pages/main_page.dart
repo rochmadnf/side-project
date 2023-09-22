@@ -80,7 +80,7 @@ class _MainPageState extends State<MainPage> {
                 ),
                 GButton(
                     icon: PhosphorIcons.fill.mapTrifold, text: 'Peta Kluster'),
-                GButton(icon: PhosphorIcons.fill.sparkle, text: 'Cek Mutu'),
+                GButton(icon: PhosphorIcons.fill.testTube, text: 'Uji Data'),
                 GButton(icon: PhosphorIcons.fill.usersThree, text: 'Peneliti'),
               ]),
         ),
