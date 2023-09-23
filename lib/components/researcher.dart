@@ -2,7 +2,6 @@ import 'package:bamer_palu/components/anchor_wo.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class Researcher extends StatelessWidget {
   final String imageName, name, scholarURL, expertise;
