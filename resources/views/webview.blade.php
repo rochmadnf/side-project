@@ -18,7 +18,7 @@
 <body class="antialiased text-gray-900">
     <main class="min-h-screen w-full flex items-center justify-center md:mt-0">
         <section
-            class="relative flex flex-col justify-center overflow-hidden h-screen unmobile:h-[650px] md:rounded-2xl w-screen md:w-[340px] md:border-[5px] border-rose-400 bg-slate-50 shadow-xl shadow-rose-500/40">
+            class="relative flex flex-col justify-center overflow-hidden h-screen  md:rounded-2xl w-screen md:w-[340px] md:border-[5px] border-rose-400 bg-slate-50">
             @if ($pageTitle)
                 <div class="p-4 overflow-y-auto">
                     <h1 class="text-center font-bold text-xl border-b-2 border-b-slate-700 pb-1 mb-6 uppercase">

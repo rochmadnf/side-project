@@ -30,7 +30,7 @@
                 </tr>
                 <tr>
                     <th>Mutu I</th>
-                    <th>Mutu I</th>
+                    <th>Mutu II</th>
                 </tr>
             </thead>
             <tbody>
