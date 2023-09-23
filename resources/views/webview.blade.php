@@ -17,21 +17,15 @@
 
 <body class="antialiased text-gray-900">
     <main class="min-h-screen w-full flex items-center justify-center md:mt-0">
-        <section
-            class="relative flex flex-col justify-center overflow-hidden h-screen  md:rounded-2xl w-screen md:w-[340px] md:border-[5px] border-rose-400 bg-slate-50">
-            @if ($pageTitle)
-                <div class="p-4 overflow-y-auto">
-                    <h1 class="text-center font-bold text-xl border-b-2 border-b-slate-700 pb-1 mb-6 uppercase">
-                        {{ $pageTitle }}
-                    </h1>
+        <section class="relative flex flex-col justify-center w-screen md:w-[380px] bg-slate-50">
+            <div class="p-4">
+                <h1 class="text-center font-bold text-xl border-b-2 border-b-slate-700 pb-1 mb-6 uppercase">
+                    {{ $pageTitle }}
+                </h1>
+                <div role="contentinfo" class="space-y-6">
                     @yield('content')
                 </div>
-            @else
-                <div class="p-4 overflow-y-auto flex flex-col justify-center">
-                    @yield('content')
-                </div>
-                @yield('self_footer')
-            @endif
+            </div>
         </section>
     </main>
 

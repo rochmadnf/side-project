@@ -9,23 +9,25 @@ window.addEventListener("load", function () {
     }, 150);
 });
 
-document.getElementById("fullscreen-btn").addEventListener("click", (e) => {
-    const isOpen = !(e.currentTarget.getAttribute("data-open") === "true");
-    e.currentTarget.setAttribute("data-open", isOpen);
+if (document.getElementById("fullscreen-btn")) {
+    document.getElementById("fullscreen-btn").addEventListener("click", (e) => {
+        const isOpen = !(e.currentTarget.getAttribute("data-open") === "true");
+        e.currentTarget.setAttribute("data-open", isOpen);
 
-    const fullscreenOff = document.querySelector(".fullscreen-off");
-    const fullscreenOn = document.querySelector(".fullscreen-on");
+        const fullscreenOff = document.querySelector(".fullscreen-off");
+        const fullscreenOn = document.querySelector(".fullscreen-on");
 
-    if (isOpen) {
-        fullscreenOff.classList.remove("hidden");
-        fullscreenOn.classList.add("hidden");
-        fullScreenMode();
-    } else {
-        fullscreenOff.classList.add("hidden");
-        fullscreenOn.classList.remove("hidden");
-        fullScreenMode("off");
-    }
-});
+        if (isOpen) {
+            fullscreenOff.classList.remove("hidden");
+            fullscreenOn.classList.add("hidden");
+            fullScreenMode();
+        } else {
+            fullscreenOff.classList.add("hidden");
+            fullscreenOn.classList.remove("hidden");
+            fullScreenMode("off");
+        }
+    });
+}
 
 function fullScreenMode(mode = "on") {
     const docElm = document.documentElement;
@@ -42,3 +44,12 @@ function fullScreenMode(mode = "on") {
         docElm.webkitRequestFullScreen();
     }
 }
+
+// if (document.getElementById("webview-back")) {
+//     document.getElementById("webview-back").addEventListener("click", () => {
+//         const confirm_result = confirm("Apakah kamu yakin?");
+//         if (confirm_result == true) {
+//             window.close();
+//         }
+//     });
+// }

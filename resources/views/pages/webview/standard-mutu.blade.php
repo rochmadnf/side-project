@@ -30,7 +30,7 @@
                 </tr>
                 <tr>
                     <th>Mutu I</th>
-                    <th>Mutu I</th>
+                    <th>Mutu II</th>
                 </tr>
             </thead>
             <tbody>
@@ -142,4 +142,7 @@
         </ol>
 
     </article>
+
+    {{-- <button id="webview-back"
+        class="block w-4/5 py-1.5 px-3 rounded-md bg-slate-900 text-slate-50 text-sm mx-auto">Kembali</button> --}}
 @endsection
