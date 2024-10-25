@@ -13,6 +13,7 @@
     <link rel="shortcut icon" href="{{ asset('favicon.png') }}" type="image/png" sizes="32x32">
 
     @vite(['resources/css/app.css'])
+    @yield('vite')
 </head>
 
 <body class="bg-slate-50 text-gray-900 antialiased">

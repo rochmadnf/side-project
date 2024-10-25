@@ -35,7 +35,7 @@ trait NavigationTrait
 
             [
                 'name' => 'Uji Mutu',
-                'route' => '#',
+                'route' => route('mutu-check'),
                 'color' => [
                     'bg' => ['primary' => 'bg-red-500', 'secondary' => 'bg-red-400']
                 ],
