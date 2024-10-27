@@ -16,6 +16,6 @@
     },
     "dependencies": {
         "imask": "^7.6.1",
-        "simple-notify": "^1.0.5"
+        "sweetalert2": "^11.14.4"
     }
 }

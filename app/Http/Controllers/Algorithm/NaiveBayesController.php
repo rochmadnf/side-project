@@ -93,11 +93,10 @@ class NaiveBayesController extends Controller
         $nsM1 = $this->runFormula($mutu1, $val, $totalData, $totalMutu1);
 
         // new sample mutu 2
-        $totalMutu2 = $naiveData->where('mutu_class', '=', 1)->count();
+        $totalMutu2 = $naiveData->where('mutu_class', '=', 2)->count();
         $nsM2 = $this->runFormula($mutu2, $val, $totalData, $totalMutu2);
 
-
-        return ($nsM1 > $nsM2) ? 1 : 2;
+        return ($nsM1 > $nsM2 || $nsM1 === $nsM2) ? 1 : 2;
     }
 
     public function submit(Request $request)
@@ -137,6 +136,6 @@ class NaiveBayesController extends Controller
             'mutu_class' => $mutuClass,
         ]);
 
-        return back()->with('success', 'Bawang Merahmu masuk dalam kategori Mutu ' . ($mutuClass === 1 ? 'I' : 'II'));
+        return back()->with('success', 'MUTU ' . ($mutuClass === 1 ? 'I' : 'II'));
     }
 }
